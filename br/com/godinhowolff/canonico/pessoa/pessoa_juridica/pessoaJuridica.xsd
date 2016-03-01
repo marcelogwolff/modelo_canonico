@@ -1,0 +1,23 @@
+<schema 
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/pessoa_juridica"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/pessoa_juridica"
+	xmlns:pessoa="http://service.godinhowolff.com.br/canonico/pessoa">
+
+	<import namespace="http://service.godinhowolff.com.br/canonico/pessoa"
+		schemaLocation="../pessoa.xsd" />
+	<complexType name="pessoa_juridica">
+		<complexContent>
+			<extension base="pessoa:pessoa">
+				<sequence>
+					<element type="date" name="data_abertura"
+						nillable="false" minOccurs="1" maxOccurs="1" />
+					<element type="string" name="funcao" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<element name="pessoa_juridica" type="tns:pessoa_juridica" />
+</schema>

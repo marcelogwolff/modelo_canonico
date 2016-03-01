@@ -1,0 +1,13 @@
+<schema
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/email" 
+	targetNamespace="http://service.godinhowolff.com.br/canonico/email">
+	<complexType name="email">
+		<sequence>
+			<element type="string" name="tipo"/>
+			<element type="string" name="endereco" />
+		</sequence>
+	</complexType>
+</schema>

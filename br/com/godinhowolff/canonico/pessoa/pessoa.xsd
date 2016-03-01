@@ -1,0 +1,41 @@
+<schema 
+	attributeFormDefault="qualified"
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/pessoa"
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/pessoa"
+	xmlns:endereco="http://service.godinhowolff.com.br/canonico/endereco"
+	xmlns:telefone="http://service.godinhowolff.com.br/canonico/telefone"
+	xmlns:email="http://service.godinhowolff.com.br/canonico/email">
+
+	<import namespace="http://service.godinhowolff.com.br/canonico/endereco" schemaLocation="../enderecamento/endereco.xsd" />
+	<import namespace="http://service.godinhowolff.com.br/canonico/email" schemaLocation="../enderecamento/email.xsd" />
+	<import namespace="http://service.godinhowolff.com.br/canonico/telefone" schemaLocation="../enderecamento/telefone.xsd" />
+
+	<complexType name="enderecos">
+		<sequence>
+			<element name="endereco" type="endereco:Endereco" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="emails">
+		<sequence>
+			<element name="email" type="email:email" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+
+	<complexType name="telefones">
+		<sequence>
+			<element name="telefone" type="telefone:telefone" minOccurs="0"	maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+
+	<complexType name="pessoa">
+		<sequence>
+			<element type="tns:enderecos" name="enderecos" />
+			<element type="tns:emails" name="emails" />
+			<element type="tns:telefones" name="telefones" />
+		</sequence>
+	</complexType>
+	<element name="pessoa" type="tns:pessoa" />
+</schema>

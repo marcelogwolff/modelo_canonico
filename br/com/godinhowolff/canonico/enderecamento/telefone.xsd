@@ -1,0 +1,14 @@
+<schema attributeFormDefault="qualified" 
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/telefone"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/telefone">
+	
+	<complexType name="telefone">
+		<sequence>
+			<element name="ddd" type="string" />
+			<element name="telefone" type="string" />
+			<element name="tipo" type="string"/>
+		</sequence>
+	</complexType>
+</schema>

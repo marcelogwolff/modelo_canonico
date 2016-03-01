@@ -1,0 +1,29 @@
+<schema 	attributeFormDefault="qualified"
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/pessoa_fisica"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/pessoa_fisica"
+	xmlns:pessoa="http://service.godinhowolff.com.br/canonico/pessoa">
+
+	<import namespace="http://service.godinhowolff.com.br/canonico/pessoa" 
+		schemaLocation="../pessoa.xsd" />
+
+	<complexType name="pessoa_fisica">
+		<complexContent>
+			<extension base="pessoa:pessoa">
+				<sequence>
+					<element type="string" name="nome" />
+					<element type="date" name="data_nascimento"/>
+					<element name="genero" type="string" />
+					<element name="estado_civil" type="string" />
+					<element name="nome_pai" type="string" />
+					<element name="nome_mae" type="string" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="pessoa_fisica" type="tns:pessoa_fisica" />
+
+</schema>
+	

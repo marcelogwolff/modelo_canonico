@@ -1,0 +1,29 @@
+<schema 	attributeFormDefault="qualified"
+	elementFormDefault="qualified" 
+	xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://service.godinhowolff.com.br/canonico/pessoa_fisica_nacional"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/pessoa_fisica_nacional"
+	xmlns:pf="http://service.godinhowolff.com.br/canonico/pessoa_fisica">
+
+	<import namespace="http://service.godinhowolff.com.br/canonico/pessoa_fisica" 
+		schemaLocation="../pessoaFisica.xsd" />
+
+	<complexType name="pessoa_fisica_nacional">
+		<complexContent>
+			<extension base="pf:pessoa_fisica">
+				<sequence>
+					<element name="cpf" type="string" />
+					<element name="rg" type="string" />
+					<element name="orgao_emissor_rg" type="string" />
+					<element name="pais_nascimento" type="string" />
+					<element name="estado_nascimento" type="string" />
+					<element name="municipio_nascimento" type="string" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+
+	<element name="pessoa_fisica_nacional" type="tns:pessoa_fisica_nacional" />
+
+</schema>
+	

@@ -1,0 +1,21 @@
+<schema attributeFormDefault="qualified" elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.godinhowolff.com.br/canonico/endereco"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/endereco">
+	<complexType name="Endereco">
+		<sequence>
+			<element type="string" name="cep" />
+			<element type="string" name="caixaPostal" />
+			<element type="string" name="tipo" />
+			<element type="string" name="tipo_logradouro" />
+			<element type="string" name="numero" />
+			<element type="string" name="logradouro" />
+			<element type="string" name="complemento" />
+			<element type="string" name="bairro" />
+			<element type="string" name="cidade" />
+			<element type="string" name="estado" />
+			<element type="string" name="estado_sigla" />
+			<element type="string" name="pais" />
+			<element type="string" name="pais_sigla" />
+		</sequence>
+	</complexType>
+</schema>

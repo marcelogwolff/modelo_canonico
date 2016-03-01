@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema attributeFormDefault="qualified" elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.godinhowolff.com.br/canonico/pessoa_juridica_nacional"
+	targetNamespace="http://service.godinhowolff.com.br/canonico/pessoa_juridica_nacional"
+	xmlns:pj="http://service.godinhowolff.com.br/canonico/pessoa_juridica">
+
+	<import namespace="http://service.godinhowolff.com.br/canonico/pessoa_juridica"
+		schemaLocation="../pessoaJuridica.xsd"/>
+	
+		<complexType name="pessoa_juridica_nacional">
+			<complexContent>
+				<extension base="pj:pessoa_juridica">
+					<sequence>
+						<element name="cnpj" type="string" />
+						<element name="razao_social" type="string" />
+						<element name="nome_fantasia" type="string" />
+						<element name="isentoinscricaoestadual" type="string" />
+						<element name="inscricaoestadual" type="string" />
+						<element name="isentoisncricaosubstituto" type="string" />
+						<element type="string" name="inscricaoestadualsubstituto" />
+					</sequence>
+				</extension>
+			</complexContent>
+		</complexType>
+</schema>
